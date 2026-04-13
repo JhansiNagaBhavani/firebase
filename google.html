@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Authentication</title>
+    <link rel="stylesheet" href="google.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Firebase Google Sign-In</h2>
+
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit" class="primary">Login with Email</button>
+        <button type="button" id="registerBtn" class="secondary">Register</button>
+      </form>
+
+      <div class="separator"><span>OR</span></div>
+
+      <button class="google-btn" onclick="signInWithGoogle()">Continue with Google</button>
+    </div>
+
+    <script type="module" src="google.js"></script>
+  </body>
+</html>

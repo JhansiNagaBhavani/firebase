@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="google.css" />
+  </head>
+  <body>
+    <div class="container home-card">
+      <h1>Welcome to your dashboard</h1>
+      <button id="logoutBtn" class="primary logout-btn">Logout</button>
+    </div>
+
+    <script type="module" src="google.js"></script>
+    <script>
+      const logoutBtn = document.getElementById("logoutBtn");
+      if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+          if (window.logout) {
+            window.logout();
+          } else {
+            window.location.href = "google.html";
+            // alert('Logout function is not loaded yet. Refresh the page.');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
